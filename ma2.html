@@ -1274,15 +1274,7 @@ Isa booda dogoggora guddaa akka inni uume itti himee, dhiifama godheefii mana ba
   
   </div>
 <script>
-function downloadBaacoo(divId, fileName) {
-    const content = document.getElementById(divId).innerText;
-    const blob = new Blob([content], { type: "text/plain" });
-    const link = document.createElement("a");
-    link.href = URL.createObjectURL(blob);
-    link.download = fileName;
-    link.click();
-  }
-  
+
 function toggleMeaning(btn) {
   const meaning = btn.nextElementSibling;
   if(meaning.style.display === "none" || meaning.style.display === "") {
@@ -1293,6 +1285,17 @@ function toggleMeaning(btn) {
     btn.textContent = "Bu'aa Ilaali";
   }
 }
+
+function downloadBaacoo(divId, fileName) {
+    const content = document.getElementById(divId).innerText;
+    const blob = new Blob([content], { type: "text/plain" });
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = fileName;
+    link.click();
+  }
+  
+  
 </script>
 </body>
   </html>
