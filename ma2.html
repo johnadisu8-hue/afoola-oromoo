@@ -90,7 +90,7 @@ Itti fufee kan of beeksise nama Itoophiyaa sana ture. "Carraan argadhe kanaaf is
 "Akkamitti dubartoonni karaa handhuura isaanii da'u? Kun ni danda'amaa?" jedhe. Obbo Miijanaan deebiseefii, "Xiqqoo gad siqa!" jedheen jedhama.</p>
     <button onclick="toggleMeaning(this)">Bu'aa Ilaali</button>
     <p class="meaning">Coming soon!</p>
-    <a href="baacoo1.html" download="Baacoo">Download</a>
+      <button onclick="downloadBaacoo('Baacoo1', 'Baacoo1.txt')">Download</button>
     </div>
   </div>
   </div>
@@ -1274,6 +1274,15 @@ Isa booda dogoggora guddaa akka inni uume itti himee, dhiifama godheefii mana ba
   
   </div>
 <script>
+function downloadBaacoo(divId, fileName) {
+    const content = document.getElementById(divId).innerText;
+    const blob = new Blob([content], { type: "text/plain" });
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = fileName;
+    link.click();
+  }
+  
 function toggleMeaning(btn) {
   const meaning = btn.nextElementSibling;
   if(meaning.style.display === "none" || meaning.style.display === "") {
