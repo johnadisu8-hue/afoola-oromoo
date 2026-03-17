@@ -61,23 +61,31 @@ nav a:hover{
     background-color:green;
     
 }
-
 .container {
-  width: 95%;        /* full screen */
-  max-width: px;  /* yoo barbaadde desktop guddaa irratti */
-  margin: 0 auto;     /* center gochuuf */
-  padding:10px 10px;    /* device xiqqaa irratti padding */
+  display:flex;
+  flex-wrap:wrap;
+  gap:20px;
+  width:95%;
+  margin:0 auto;
+  padding:10px;
   margin-top:20px;
-    flex: 1; /* allows content to grow and push footer down */
 }
-
 .card{
     background:white;
     padding:10px;
     margin-bottom:15px;
     border-radius:8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2
+    ); }
     
+  .card{
+  flex:1 1 45%;
+  background:white;
+  padding:10px;
+  border-radius:8px;
+  box-shadow:0 2px 5px rgba(0,0,0,0.2);
+  border:1.3px inset green;
+}  
 /* Footer styling */
 footer{
     text-align:center;
@@ -88,13 +96,42 @@ footer{
    font-style:italic;
    width:100%;
    }
-   
+  
+  .m{
+  display:flex;
+  flex-wrap:wrap;
+  gap:20px;
+  width:95%;
+  margin:0 auto;
+  padding:10px;
+  margin-top:20px;
+  
+}
+
+.d{
+  flex:1 1 30%;
+  padding-right:100px;
+  padding-left:10px;
+  
+  
+}
+@media (max-width:700px){
+
+.m{
+flex-direction:column;
+}
+
+.d{
+flex:1 1 100%;
+}
+
+} 
    
 div.card{
   border:1.3px inset green;}
 
 img {
-  width: 100%;        /* device hunda irratti guutuu width */
+  width:100%;        /* device hunda irratti guutuu width */
   height: auto;       /* proportion walfakkaataa eega */
   display:block;     /* margin auto fi gaps furuuf */
 }
@@ -115,12 +152,22 @@ padding:10px;
 display:block;
 background:#084c3a;
 }
+@media (max-width:700px){
+
+.container{
+flex-direction:column;
+}
+
+.card{
+flex:1 1 100%;
+}
+
+}
 
 nav a{
    display:block;
     padding:10px;
     border-top:1px solid #ccc;
-   font-size:25px;
 }
 div#yes{width:100%;
 }
@@ -152,14 +199,14 @@ flex-direction:column;
 </nav>
 
 <div class="container">
-<h2 style="font-size: 22px;text-align: center;padding: 25px;box-shadow: 0 4px 8px rgba(0,0,0,0.2);border:1.2px inset green;border-radius:5px;color: #0b6e4f;"> Afoola jechuun maal jechuu dha?</h2>
+<h2 style="font-size: 22px;text-align: center;padding: 25px;box-shadow: 0 4px 8px rgba(0,0,0,0.2);border:1.2px inset green;border-radius:5px;color: #0b6e4f;">Afoola jechuun maal jechuu dha?</h2>
 <p style="font-size:20px;">
-Afoola jechuun <span class="highlight">mammaaksa, durdurii, sheekoo, hiibboo, fi baacoo</span> of keessatti qabatee yaada, safuu fi ogummaa namoota irraa dhaloota biraatti dabarsuudha. Afoolaan yeroo baay’ee <span class="highlight">namoota bashannansiisu, barsiisu, fi yaada bal’aa gabaabsanii dabarsuuf</span> tajaajila.</p>
- <p style="font-size:20px;">
-<img style="border:px dashed red;border-radius:5px" src="21.png" alt="Baacoo" width="320px">    
-Afoolli dhaloota irraa dhalootatti darbuun <span class="highlight">aadaa Oromoo fi safuu isaa guddisuuf</span> iddoo olaanaa qaba.
-<br>
-Afoolaan gosa gara garaa qaba:muraasni isaanii kan armaan gadiiti. 
+Afoola jechuun <span class="highlight">mammaaksa, durdurii, sheekoo, hiibboo, fi baacoo</span> of keessatti qabatee yaada, safuu fi ogummaa namoota irraa dhaloota biraatti dabarsuudha. Afoolaan yeroo baay’ee <span class="highlight">namoota bashannansiisu, barsiisu, fi yaada bal’aa gabaabsanii dabarsuuf</span> tajaajila.
+<br><br>
+
+Afoolli dhaloota irraa dhalootatti darbuun <span class="highlight">aadaa Oromoo fi safuu isaa guddisuuf</span> iddoo olaanaa qaba.<br>
+
+Afoolaan gosa gara garaa qaba.muraasni isaanii kan armaan gadiiti. 
 </p>
 </div>
 
@@ -171,7 +218,7 @@ Afoolaan gosa gara garaa qaba:muraasni isaanii kan armaan gadiiti.
  </div>
  
 <div class="card">
-   <img src="22.png" alt="Baacoo" width="320px">
+   <img src="13.png" alt="Baacoo" width="320px">
    <p style="font-style:mono;font-size:22px;">Baacoon gosa afoolaa Oromoo keessaa tokko ta’ee gaaffii fi deebii bifa bashannansiisaa fi yaada kakaasu ta’een dhiyaatuudha. Yeroo baay’ee ijoollee, dargaggootaa fi maatii gidduutti bashannanaaf itti fayyadamu. Namni tokko gaaffii baacoo dhiyeessa; kan biraan immoo yaaduun deebii sirrii argachuu yaala. Baacoon namoota yaaduu, hubachuu fi ogummaa isaanii guddisuuf gargaara. Akkasumas walitti dhufeenya namootaa cimsuun bashannana uuma. Kanaafuu baacoon aadaa Oromoo keessatti qabeenya guddaa kan ta’ee fi dhaloota irraa dhalootatti darbuudha. </p>
    </div>
 
@@ -201,7 +248,9 @@ haala hoo’aan hordofama.Hirmaannaa cimaatu keessatti godhama.</p>
 
 </div>
 <div id="no">
-   <h3 style="text-align:left;color:#FFD700;font-weight:bold;">aforomoo.com</h3>
+  <div class="m">
+    <div class="d">
+   <h3 style="text-align:left;color:#FFD700;font-weight:bold;">afoolaoromoo.com</h3>
  <p style="font-style:mono;font-size:18px;">kuusaa afoolota Afaan Oromoo kan akka mammaaksa, hiibboo, durdurii fi sheekoo walitti qabuun aadaa fi ogummaa Oromoo tikfachuu fi dhalootaaf dabarsuuf kan qophaa’edha.</p>
   <h3 style="text-align:left;color:#FFD700;font-weight:bold;">Afoola</h3>
 <p><a style="font-style:mono;font-size:18px;" href="baafata1.html">durdurii</a></p>
@@ -209,6 +258,8 @@ haala hoo’aan hordofama.Hirmaannaa cimaatu keessatti godhama.</p>
 <p><a style="font-style:mono;font-size:18px;" href="baafata3.html">mammaaksa</a></p>
 <p><a style="font-style:mono;font-size:18px;" href="baafata4.html">hiibboo</a></p>
 <p><a href="baafata5.html">Sheekoo</a></p>
+</div>
+<div class="d">
 <h3 style="font-weight:bold;text-align:left;color:#FFD700;">Contacts/Feedback</h3>
  <p><a style="font-size:18px;color:#E0FFFF;"href="callto.0966288316">+251966288316</a><br></br>
  <a style="font-size:18px;color:#E0FFFF;" href="callto.0966288316">+251715203891</a><br>
@@ -218,8 +269,9 @@ haala hoo’aan hordofama.Hirmaannaa cimaatu keessatti godhama.</p>
  <h3 style="text-align:left;color:#FFD700;font-weight:bold;">Other links</h3>
  <p><a style="font-style:mono;font-size:18px;" href="index.html">Home</a></p>
  <p><a style="font-style:mono;font-size:18px;" href="about.html">About</a></p>
+ </div>
+ </div>
 <hr>
-
 <footer>
 <p style="font-style:mono;font-size:18px;text-align:center;">© 2026 Afoola Afaan Oromoo | All rights reserved. | By John Adisu</p>
 </footer>
@@ -247,4 +299,4 @@ function showSection(id){
 </script>
 
 </body>
-</html>            
+    </html>
